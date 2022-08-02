@@ -3,8 +3,8 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 *,
-::before,
-::after {
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 body {
@@ -23,6 +23,7 @@ body {
 img {
 	display: block;
 	width: 100%;
+	height: auto;
 }
 .list {
 	list-style: none;
@@ -37,6 +38,17 @@ img {
 	text-decoration: none;
 	cursor: pointer;
 }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p,
+.ul {
+	margin: 0;
+	padding: 0;
+}
 .conteiner {
 	margin-left: auto;
 	margin-right: auto;
@@ -47,6 +59,7 @@ img {
 /* ---------------------HEADER----------------- */
 .page-header {
 	background-color: var(--primary-white-color);
+	border-bottom: 1px #ececec;
 }
 .container-header,
 .nav,
@@ -73,36 +86,35 @@ img {
 	font-size: 26px;
 	line-height: 1.19;
 	letter-spacing: 0.03em;
-}
-.logo,
-.fl {
 	color: var(--accent-text-color);
 }
 .heder-logo {
 	color: #000000;
 }
-
 .site-nav .item + .item,
 .contacts-nav .item + .item {
 	margin-left: 50px;
 }
 .site-nav .link {
 	display: block;
-	padding-top: 32px;
-	padding-bottom: 32px;
 }
 .site-nav a {
 	color: var(--primary-text-color);
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 .contacts-nav a {
 	color: var(--title-text-color);
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 .link.current {
 	color: var(--accent-text-color);
 }
 /*--------------------HERO-------------------- */
 .hero {
-	padding: 230px 0;
+	padding-top: 200px;
+	padding-bottom: 200px;
 	background-color: var(--accent-color);
 	text-align: center;
 }
@@ -146,7 +158,6 @@ img {
 	margin-left: 30px;
 	max-width: 270px;
 }
-
 .section,
 .fiature,
 .team {
@@ -200,19 +211,20 @@ img {
 	background-color: var(--second-color);
 }
 .team-about {
-	background-color: var(--primary-white-color);
 	display: flex;
 }
 .team-about .box + .box {
 	margin-left: 30px;
 }
 .box {
+	background-color: var(--primary-white-color);
 	outline: 1px solid #eeeeee;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 }
 .team-name {
-	margin-top: 30px;
+	padding-top: 30px;
+	margin-top: 0;
 	margin-bottom: 10px;
 	font-weight: 500;
 	font-size: 16px;
@@ -223,7 +235,8 @@ img {
 }
 .team-text {
 	margin-top: 0;
-	margin-bottom: 30px;
+	margin-bottom: 0;
+	padding-bottom: 30px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.19;
@@ -234,6 +247,8 @@ img {
 /* ---------------------FOOTER----------------- */
 .footer {
 	background-color: var(--accent-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 .fl {
 	display: block;
@@ -242,20 +257,19 @@ img {
 	font-size: 26px;
 	line-height: 1.19;
 	letter-spacing: 0.03em;
-	padding-top: 60px;
 	margin-bottom: 20px;
+	color: var(--accent-text-color);
 }
-
 .footer-logo {
 	color: var(--primary-white-color);
 }
-.footer-adress {
+.adress,
+.contact {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	font-style: normal;
-	padding-bottom: 60px;
 }
 .adress {
 	color: var(--primary-white-color);
@@ -263,11 +277,16 @@ img {
 .contact {
 	color: rgba(255, 255, 255, 0.6);
 }
-
+.adress-item {
+	margin-bottom: 9px;
+}
+.adress-item:last-child {
+	margin-bottom: 0;
+}
 /* ---------------------PORTFOLIO----------------- */
 
 .filter {
-	padding-bottom: 34px;
+	margin-bottom: 50px;
 	display: flex;
 	justify-content: center;
 }
@@ -299,19 +318,16 @@ img {
 	gap: 30px;
 }
 .portfolio .item {
-	outline: 1px solid #eeeeee;
 	flex-basis: calc((100% - 2 * 30px) / 3);
 }
 .portfolio-name {
-	margin: 20px 24px 0 24px;
+	margin-bottom: 4px;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
 	letter-spacing: 0.06em;
 }
 .portfolio-text {
-	margin: 4px 24px 0 24px;
-	padding-bottom: 20px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.88;
@@ -319,10 +335,16 @@ img {
 	color: var(--title-text-color);
 	margin-bottom: 0;
 }
-.portfolio .conteiner {
+.portfolio {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 .filter .button-filter + .button-filter {
 	margin-left: 30px;
+}
+.div {
+	padding: 20px 24px;
+	border-left: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
 }
