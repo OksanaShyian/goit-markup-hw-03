@@ -59,7 +59,7 @@ img {
 /* ---------------------HEADER----------------- */
 .page-header {
 	background-color: var(--primary-white-color);
-	border-bottom: 1px #ececec;
+	border-bottom: 1px solid #ececec;
 }
 .container-header,
 .nav,
